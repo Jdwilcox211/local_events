@@ -61,6 +61,13 @@ def clear_sheet():
         time.sleep(5)
 
 def event_data(sheettype):
+    event_title=''
+    event_subtitle=''
+    eventdate=''
+    eventdoortime=''
+    eventtime=''
+    eventage=''
+    eventprice=''
     exrow=1
     exrowcon=1
     sheettype.update(f'A{exrow}', f'Vinyl Music Hall - Upcoming Events')
@@ -110,7 +117,7 @@ def event_data(sheettype):
                 for age_section in age_price_section.find_all('div',{'class':'detail detail_age'}):
                     for showage in age_section.find_all('div',{'class':'name'}):
                         raweventage=showage.text
-                        event_age=f'{raweventage} | '
+                        eventage=f'{raweventage} | '
                         #print(eventage)
                 for price_section in age_price_section.find_all('div',{'class':'detail detail_price_range'}):
                     for showprice in price_section.find_all('div',{'class':'name'}):
@@ -136,18 +143,18 @@ def event_data(sheettype):
             sheettype.update(f'E{exrowcon}', showtimes)
             exrowcon+=1
 
-        time.sleep(5)
+            time.sleep(5)
 
 
-        print(f'{event_header}')
-        print(f'{showtimes}')
-        event_title=''
-        event_subtitle=''
-        eventdate=''
-        eventdoortime=''
-        eventtime=''
-        eventage=''
-        eventprice=''
+            print(f'{event_header}')
+            print(f'{showtimes}')
+            event_title=''
+            event_subtitle=''
+            eventdate=''
+            eventdoortime=''
+            eventtime=''
+            eventage=''
+            eventprice=''
 
 
     #return exrow
