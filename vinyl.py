@@ -57,7 +57,9 @@ wks = gc.open_by_key("1tQi6RkOLgI4V-NFU9cAXnYosY5xlUaWRUTqnVtxpQUM")
 main_sheet = wks.worksheet("Vinyl")
 
 def clear_sheet():
-        wks.values_clear("Vinyl!A1:E60")
+        wks.values_clear("Vinyl!A1:B60")
+        time.sleep(5)
+        wks.values_clear("Vinyl!D1:E60")
         time.sleep(5)
 
 def event_data(sheettype):
