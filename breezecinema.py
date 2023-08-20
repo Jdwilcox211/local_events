@@ -5,20 +5,23 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import chromedriver_autoinstaller
 import logging
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
-chrome_options = Options()
-chrome_options.add_argument("--window-size=1920,1080")
-chrome_options.add_argument("--start-maximized")
+service=Service(executable_path=r'/home/kitchentv/python_scripts/chromedriver')
+
+options = webdriver.ChromeOptions()
+options.add_argument("--window-size=1920,1080")
+options.add_argument("--start-maximized")
 #comment/uncomment with the # on line below to toggle headless option.  make sure your login information is correct as headless mode will disable the manual login ability
-chrome_options.add_argument("--headless")  
-chrome_options.add_argument('--ignore-certificate-errors')
+options.add_argument("--headless")  
+options.add_argument('--ignore-certificate-errors')
 #this option is needed to run headless on some sites that deny headless browsers
-chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36}") 
+options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36}") 
+#set system to look in lib folder for function files
 
 
 #setup logging
@@ -35,7 +38,8 @@ logger.setLevel(logging.INFO)
 # #comment below is if you want to manually define chromedriver.  please comment out the next line below that if you wish to use your own chromedriver
 # #driver = webdriver.Chrome('/usr/lib/chromium-browser/chromedriver',options=chrome_options)
 #hromedriver_autoinstaller.install()
-driver = webdriver.Chrome(options=chrome_options)
+#driver = webdriver.Chrome(service=service,options=options)
+driver = webdriver.Chrome(options=options)
 driver.maximize_window()
 
 #sheets setup
@@ -72,7 +76,7 @@ print(movie_tomorrow)
 
 def clear_sheet():
         wks.values_clear("Cinema1!A1:B60")
-        time.sleep(5)
+        time.sleep(2)
         wks.values_clear("Cinema2!A1:B60")
 
 def movie_data(movie_date,sheettype,header_date):
@@ -81,12 +85,12 @@ def movie_data(movie_date,sheettype,header_date):
     exrow+=3
     breezeshowtimeurl="https://www.movieshowtime.net/breeze/"
     driver.get(f'{breezeshowtimeurl}')
-    time.sleep(3)
+    time.sleep(2)
     driver.find_element(By.XPATH, f'//a[@data-date="{movie_date}"]').click()
-    time.sleep(3)
+    time.sleep(2)
     source1 = driver.page_source
     soup = BeautifulSoup(source1, 'lxml')
-    time.sleep(3)
+    time.sleep(2)
     for movie_list in soup.find_all('div',{'id':'movie-list'}):
         for movie_card in movie_list.find_all('div',{'class':'movie'}):
             times=[]
@@ -121,7 +125,7 @@ def movie_data(movie_date,sheettype,header_date):
             sheettype.update(f'B{exrow}', f'Showtimes: {showtimes}')
             exrow+=1
             #exrow+=1
-            time.sleep(5)
+            time.sleep(1)
             
             print(f'{movie_header}')
             print(f'Showtimes: {showtimes}')
