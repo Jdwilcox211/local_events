@@ -1,7 +1,9 @@
 import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import os
 
+os.remove("app.log")
 
 #sheets setup
 scope = [

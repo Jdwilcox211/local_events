@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import re
 from selenium.webdriver.chrome.service import Service
+from icecream import ic
 
 
 service=Service(executable_path=r'/home/kitchentv/python_scripts/chromedriver')
@@ -26,6 +27,7 @@ options.add_argument('--ignore-certificate-errors')
 options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36}") 
 #set system to look in lib folder for function files
 
+ic.disable()
 
 #setup logging
 # for handler in logging.root.handlers[:]:
@@ -70,12 +72,13 @@ def clear_sheet():
 
 def event_data(sheettype):
     event_title=''
-    event_subtitle=''
+    #event_subtitle=''
     eventdate=''
     eventdoortime=''
     eventtime=''
     eventage=''
     eventprice=''
+    eventanddoortime=''
     exrow=1
     exrowcon=1
     sheettype.update(f'A{exrow}', f'Vinyl Music Hall - Upcoming Events')
@@ -84,59 +87,55 @@ def event_data(sheettype):
     exrowcon+=3
     vinylurl="http://vinylmusichall.com/"
     driver.get(f'{vinylurl}')
+    ic(f'loaded {vinylurl}')
     event_subtitle=''
     time.sleep(2)
 
     source1 = driver.page_source
     soup = BeautifulSoup(source1, 'lxml')
+    ic('grabbed soup')
 
 
-    for event_card in soup.find_all('div',{'class':'list-right'}):
-        for event_info in event_card.find_all('section',{'class':'list-view-details'}):        
-            for title_header in event_info.find_all('h1',{'class':'event-name headliners'}):
-                for title in title_header .find_all('a'):
-                    rawevent_title=title.text
-                    CLEAN1=re.compile('\r*')
-                    CLEAN2=re.compile('^\s*')
-                    CLEAN3=re.compile('\s*$')
-                    rawevent_title=re.sub(CLEAN1,'',rawevent_title)
-                    rawevent_title=re.sub(CLEAN2,'',rawevent_title)
-                    event_title=re.sub(CLEAN3,'',rawevent_title)
-                    #print(event_title)
-            for subtitle_section in event_card.find_all('div',{'class':'detail detail_event_subtitle'}):    
-                for subtitle in subtitle_section.find_all('div',{'class':'name'}):
-                    rawevent_subtitle=subtitle.text
-                    event_subtitle=f' - {rawevent_subtitle}'
-                    #print(event_subtitle)
-            for showdate_section in event_card.find_all('div',{'class':'detail detail_event_date'}):    
-                for showdate in showdate_section.find_all('div',{'class':'name'}):
-                    eventdate=showdate.text
-                    #print(eventdate)
-            for showtime_section in event_card.find_all('div',{'class':'detail doors-and-showtime'}):    
-                for doortime_section in showtime_section.find_all('div',{'detail detail_door_time'}):    
-                    for doortime in doortime_section.find_all('div',{'class':'name'}):
-                        eventdoortime=doortime.text
-                        #print(eventdoortime)
-                for showstart_section in showtime_section.find_all('div',{'detail detail_event_time'}):    
-                    for showtime in showstart_section.find_all('div',{'class':'name'}):
-                        eventtime=showtime.text
-                        #print(eventtime)                                              
-            for age_price_section in event_card.find_all('div',{'class':'detail age-and-price'}):    
-                for age_section in age_price_section.find_all('div',{'class':'detail detail_age'}):
-                    for showage in age_section.find_all('div',{'class':'name'}):
-                        raweventage=showage.text
-                        eventage=f'{raweventage} | '
-                        #print(eventage)
-                for price_section in age_price_section.find_all('div',{'class':'detail detail_price_range'}):
-                    for showprice in price_section.find_all('div',{'class':'name'}):
-                        eventprice=showprice.text
-                        #print(eventprice)
-                        #print()
+    
+    for title_header in soup.find_all('div',{'class':'event-info-block'}):
+        ic('found a title header')
+        for title in title_header.find_all('p',{'class':'fs-12 headliners'}):
+            rawevent_title=title.text
+            event_title=rawevent_title
+            ic(event_title)
+        for subtitle in title_header .find_all('p',{'class':'fs-12 subtitle'}):
+            rawevent_subtitle=subtitle.text
+            if rawevent_subtitle != '':
+                event_subtitle=f' - {rawevent_subtitle}'
+            else:
+                event_subtitle=''
+            ic(event_subtitle)
+        for showdate in title_header.find_all('p',{'class':'fs-18 bold mt-1r date'}):
+            eventdate=showdate.text
+            ic(eventdate)
+        for doortime in title_header.find_all('p',{'class':'fs-12 doortime-showtime'}):
+            eventanddoortime=doortime.text
+            ic(eventanddoortime)
+        ## old pull door and show time
+        # for doortime in title_header.find_all('span',{'class':'see-doortime '}):
+        #         eventdoortime=doortime.text
+        #         ic(eventdoortime)
+        # for showtime in title_header.find_all('span',{'class':'see-showtime '}):
+        #         eventtime=showtime.text
+        #         ic(eventtime)
+        for showage in title_header.find_all('span',{'class':'ages'}):
+                raweventage=showage.text
+                eventage=f'{raweventage} | '
+                ic(eventage)
+        for showprice in title_header.find_all('span',{'class':'price'}):
+                eventprice=showprice.text
+                ic(eventprice)
                 
         
         event_header=f'{eventdate} - {event_title}{event_subtitle}'
-        showtimes=f'{eventage}{eventprice} - Doors open at {eventdoortime} Show at {eventtime}'
-
+        showtimes=f'{eventage}{eventprice} - {eventanddoortime}'
+        ic(event_header)
+        
         if exrow <= 29:
             sheettype.update(f'A{exrow}', event_header)
             exrow+=1
@@ -163,7 +162,7 @@ def event_data(sheettype):
             eventtime=''
             eventage=''
             eventprice=''
-
+            eventanddoortime=''
 
     #return exrow
 clear_sheet()
