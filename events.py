@@ -3,8 +3,11 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import os
 
-os.remove("app.log")
-
+try:
+    os.remove("app.log")
+except Exception as e:
+    print('no log file')
+    
 #sheets setup
 scope = [
     "https://spreadsheets.google.com/feeds",

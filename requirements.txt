@@ -1,0 +1,5 @@
+oauth2client
+gspread
+lxml
+bs4
+selenium

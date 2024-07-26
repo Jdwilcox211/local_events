@@ -1,9 +1,7 @@
 import time
 from datetime import datetime, timedelta
-import sys
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-import chromedriver_autoinstaller
 import logging
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -81,7 +79,7 @@ def clear_sheet():
 
 def movie_data(movie_date,sheettype,header_date):
     exrow=1
-    sheettype.update(f'A{exrow}', f'The Breeze Cinema 8 ({header_date})')
+    sheettype.update_acell(f'A{exrow}', f'The Breeze Cinema 8 ({header_date})')
     exrow+=3
     breezeshowtimeurl="https://www.movieshowtime.net/breeze/"
     driver.get(f'{breezeshowtimeurl}')
@@ -116,13 +114,13 @@ def movie_data(movie_date,sheettype,header_date):
             showtimes=','.join(times)
             movie_header=f'{movie_title}'  
 
-            sheettype.update(f'A{exrow}', f'{movie_header} - ({movie_rating})')
+            sheettype.update_acell(f'A{exrow}', f'{movie_header} - ({movie_rating})')
             exrow+=1
             time.sleep(2)
-            #sheettype.update(f'B{exrow}', f'{movie_rating}')
+            #sheettype.update_acell(f'B{exrow}', f'{movie_rating}')
             #exrow+=1
             time.sleep(2)
-            sheettype.update(f'B{exrow}', f'Showtimes: {showtimes}')
+            sheettype.update_acell(f'B{exrow}', f'Showtimes: {showtimes}')
             exrow+=1
             #exrow+=1
             time.sleep(1)
@@ -138,16 +136,16 @@ def movie_data(movie_date,sheettype,header_date):
             movie_actor=''
     #return exrow
 clear_sheet()
-# main_sheet.update(f'A1{exrow}', f'The Breeze Cinema 8 -Showtimes for {date_header_today}\n')
+# main_sheet.update_acell(f'A1{exrow}', f'The Breeze Cinema 8 -Showtimes for {date_header_today}\n')
 # exrow+=1
 movie_data(movie_today,cinema1_sheet,date_header_today)
-#main_sheet.update(f'A{exrow}', f'\n Showtimes for {date_header_tomorrow}\n')
+#main_sheet.update_acell(f'A{exrow}', f'\n Showtimes for {date_header_tomorrow}\n')
 #exrow+=1
 movie_data(movie_tomorrow,cinema2_sheet,date_header_tomorrow)
 
 timestamp=datetime.now()
 tlog=timestamp.strftime("%m/%d/%Y %I:%M:%S %p")
-cinema1_sheet.update(f'A2', f'last updated: {tlog}')
-cinema2_sheet.update(f'A2', f'last updated: {tlog}')
+cinema1_sheet.update_acell(f'A2', f'last updated: {tlog}')
+cinema2_sheet.update_acell(f'A2', f'last updated: {tlog}')
 driver.quit()
 logger.info('The Breeze Cinema Script Complete \n \n')

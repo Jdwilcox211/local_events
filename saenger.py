@@ -1,16 +1,13 @@
 import time
 from datetime import datetime, timedelta
-import sys
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-#import chromedriver_autoinstaller
 import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import re
 from selenium.webdriver.chrome.service import Service
 
 
@@ -72,8 +69,8 @@ def event_data(sheettype):
     event_subtitle=''
     exrow=1
     exrowcon=1
-    sheettype.update(f'A{exrow}', f'Saenger Theater - Upcoming Events')
-    sheettype.update(f'D{exrow}', f'Saenger Theater - Upcoming Events - continued')
+    sheettype.update_acell(f'A{exrow}', f'Saenger Theater - Upcoming Events')
+    sheettype.update_acell(f'D{exrow}', f'Saenger Theater - Upcoming Events - continued')
     exrow+=3
     exrowcon+=3
     saengerurl="https://www.pensacolasaenger.com/events"
@@ -105,11 +102,11 @@ def event_data(sheettype):
         
         print(event_header)
         if exrow <= 29:
-            sheettype.update(f'A{exrow}', event_header)
+            sheettype.update_acell(f'A{exrow}', event_header)
             exrow+=1
 
         else:
-            sheettype.update(f'D{exrowcon}', event_header)
+            sheettype.update_acell(f'D{exrowcon}', event_header)
             exrowcon+=1
         
         time.sleep(1)
@@ -128,8 +125,8 @@ event_data(main_sheet)
 
 timestamp=datetime.now()
 tlog=timestamp.strftime("%m/%d/%Y %I:%M:%S %p")
-main_sheet.update(f'A2', f'last updated: {tlog}')
-main_sheet.update(f'D2', f'last updated: {tlog}')
+main_sheet.update_acell(f'A2', f'last updated: {tlog}')
+main_sheet.update_acell(f'D2', f'last updated: {tlog}')
 
 driver.quit()
 logger.info('Saenger Script Complete \n \n')
