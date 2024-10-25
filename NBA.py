@@ -56,19 +56,48 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
 gc = gspread.authorize(credentials)
 
 wks = gc.open_by_key("1tQi6RkOLgI4V-NFU9cAXnYosY5xlUaWRUTqnVtxpQUM")
-main_sheet = wks.worksheet("ClubLA")
+main_sheet = wks.worksheet("NBA")
 
 def clear_sheet():
-        wks.values_clear("ClubLA!A1:B60")
-        time.sleep(2)
-        wks.values_clear("ClubLA!D1:E60")
-        time.sleep(2)
+        wks.values_clear("NBA!T3:V7")
+        time.sleep(10)
+        wks.values_clear("NBA!Y3:AA7")
+        time.sleep(10)
 
+        wks.values_clear("NBA!T10:V14")
+        time.sleep(10)
+        wks.values_clear("NBA!Y10:AA14")
+        time.sleep(10)
+
+        wks.values_clear("NBA!T17:V21")
+        time.sleep(10)
+        wks.values_clear("NBA!Y17:AA21")
+        time.sleep(10)
+
+        wks.values_clear("NBA!T24:V28")
+        time.sleep(10)
+        wks.values_clear("NBA!Y24:AA28")
+        time.sleep(10)
+        
+        wks.values_clear("NBA!A1:H60")
+        time.sleep(10)
+        wks.values_clear("NBA!J1:Q60")
+        time.sleep(10)
+
+        
 def event_data(sheettype):
     exrow=1
     exrowcon=1
-    sheettype.update_acell(f'A{exrow}', f'CLub LA - Upcoming Events')
-    sheettype.update_acell(f'D{exrow}', f'CLub LA - Upcoming Events - continued')
+    sheettype.update_acell(f'A{exrow}', f'NBA - Eastern Conference')
+    sheettype.update_acell(f'J{exrow}', f'NBA - Western Conference')
+    ranknumb=1
+    
+    for rankrow in range(6,21):
+        sheettype.update_acell(f'A{rankrow}', ranknumb)
+        sheettype.update_acell(f'J{rankrow}', ranknumb)
+        ranknumb+=1
+    
+    
     exrow+=3
     exrowcon+=3
     clublaurl="https://www.rockdestin.com/"
