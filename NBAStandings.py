@@ -9,9 +9,12 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+import pandas as pd
+import requests
 
+pd.set_option('display.max_columns', None)
 
-service=Service(executable_path=r'/home/kitchentv/python_scripts/chromedriver')
+# service=Service(executable_path=r'/home/kitchentv/python_scripts/chromedriver')
 
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1920,1080")
@@ -23,12 +26,11 @@ options.add_argument('--ignore-certificate-errors')
 options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36}") 
 #set system to look in lib folder for function files
 
-
 #setup logging
 # for handler in logging.root.handlers[:]:
 #     logging.root.removeHandler(handler)
 logging.basicConfig(filename="app.log", filemode="a")
-logger = logging.getLogger("Saenger")
+logger = logging.getLogger("NBAStandings")
 handler = logging.StreamHandler()
 formatter = logging.Formatter("%(asctime)s %(name)-12s %(levelname) -8s %(message)s")
 handler.setFormatter(formatter)
@@ -41,7 +43,6 @@ logger.setLevel(logging.INFO)
 #driver = webdriver.Chrome(service=service,options=options)
 driver = webdriver.Chrome(options=options)
 driver.maximize_window()
-
 
 #sheets setup
 scope = [
@@ -57,76 +58,49 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
 gc = gspread.authorize(credentials)
 
 wks = gc.open_by_key("1tQi6RkOLgI4V-NFU9cAXnYosY5xlUaWRUTqnVtxpQUM")
-main_sheet = wks.worksheet("Saenger")
+standing_sheet = wks.worksheet("NBA_teamstanding_data")
 
-def clear_sheet():
-        wks.values_clear("Saenger!A1:B60")
-        time.sleep(2)
-        wks.values_clear("Saenger!D1:E60")
-        time.sleep(2)
-        
-def event_data(sheettype):
-    event_subtitle=''
-    exrow=1
-    exrowcon=1
-    sheettype.update_acell(f'A{exrow}', f'Saenger Theater - Upcoming Events')
-    sheettype.update_acell(f'D{exrow}', f'Saenger Theater - Upcoming Events - continued')
-    exrow+=3
-    exrowcon+=3
-    saengerurl="https://www.pensacolasaenger.com/events"
-    driver.get(f'{saengerurl}')
-    event_subtitle=''
+
+
+def clear_team_sheet():
+    wks.values_clear("NBA_teamstanding_data!B2:T32")
+    time.sleep(10)
+
+def event_data_team_standard(sheettype): 
+    exrow=2
+    
+    standing_url = 'https://www.cbssports.com/nba/standings/'
+    driver.get(f'{standing_url}')
     time.sleep(2)
 
     source1 = driver.page_source
     soup = BeautifulSoup(source1, 'lxml')
 
-
-    for event_card in soup.find_all('li',{'class':'event'}):
-        for title in event_card.find_all('h3',{'class':'h4'}):        
-            event_title=title.text
-            #print(event_title)
-        for subtitle in event_card.find_all('span',{'class':'event-category'}):    
-            rawevent_subtitle=subtitle.text
-            event_subtitle=f'{rawevent_subtitle} - '
-            #print(event_subtitle)
-        for showdate_month in event_card.find_all('span',{'class':'abv'}):
-                eventmonth=showdate_month.text
-                #print(eventmonth)
-        for showdate_day in event_card.find_all('span',{'class':'cal__day'}):
-                eventday=showdate_day.text
-                #print(eventday)
-
-        
-        event_header=f'{eventmonth} {eventday} - {event_subtitle}{event_title}'
-        
-        print(event_header)
-        if exrow <= 29:
-            sheettype.update_acell(f'A{exrow}', event_header)
+    for team_card in soup.find_all('tr',{'class':'TableBase-bodyTr'}):
+        excol=3
+        for name in team_card.find_all('span',{'class':'TeamName'}):
+            teamname=name.text.strip()
+            logger.info(teamname)
+            sheettype.update_cell(exrow, 2, teamname)
+            time.sleep(7)
+        for team_data in team_card.find_all('td'):
+            datapoint=team_data.text.strip()
+            logger.info(datapoint)
+            sheettype.update_cell(exrow, excol, datapoint)
+            time.sleep(7)
+            excol+=1
+        if exrow == 16:
+            exrow+=2
+        else:    
             exrow+=1
 
-        else:
-            sheettype.update_acell(f'D{exrowcon}', event_header)
-            exrowcon+=1
-        
-        time.sleep(1)
-
-        print(f'{event_header}')
-        event_title=''
-        event_subtitle=''
-        eventday=''
-        eventmonth=''
-
-
-    #return exrow
-clear_sheet()
-event_data(main_sheet)
-
+clear_team_sheet()
+event_data_team_standard(standing_sheet)
 
 timestamp=datetime.now()
 tlog=timestamp.strftime("%m/%d/%Y %I:%M:%S %p")
-main_sheet.update_acell(f'A2', f'last updated: {tlog}')
-main_sheet.update_acell(f'D2', f'last updated: {tlog}')
+standing_sheet.update_acell(f'B1', f'last updated: {tlog}')
+standing_sheet.update_acell(f'B17', f'last updated: {tlog}')
 
 driver.quit()
-logger.info('Saenger Script Complete \n \n')
+logger.info('NBA Script Complete \n \n')                

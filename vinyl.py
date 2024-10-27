@@ -30,7 +30,7 @@ ic.disable()
 # for handler in logging.root.handlers[:]:
 #     logging.root.removeHandler(handler)
 logging.basicConfig(filename="app.log", filemode="a")
-logger = logging.getLogger("ActivateAdminlog")
+logger = logging.getLogger("Vinyl Music Hall")
 handler = logging.StreamHandler()
 formatter = logging.Formatter("%(asctime)s %(name)-12s %(levelname) -8s %(message)s")
 handler.setFormatter(formatter)

@@ -65,4 +65,30 @@ del vinyl1val
 del vinyl2val    
 time.sleep(2)
 
+nbastat1val = wks.worksheet("NBA_Players").acell('K3').value
+print(f'val one is {nbastat1val}')
+time.sleep(2)
+if nbastat1val != "TRUE":
+    import NBAStats
+del nbastat1val
+time.sleep(2)
+
+
+nbastandings1val = wks.worksheet("NBA").acell('I2').value
+print(f'val one is {nbastandings1val}')
+time.sleep(2)
+if nbastandings1val != "TRUE":
+    import NBAStandings
+del nbastandings1val
+time.sleep(2)
+
+nbaroster1val = wks.worksheet("NBA_Roster").acell('I2').value
+print(f'val one is {nbaroster1val}')
+time.sleep(2)
+if nbaroster1val != "TRUE":
+    import NBARoster
+del nbaroster1val
+time.sleep(2)
+
+
 print('all events have been ran')

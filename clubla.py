@@ -28,7 +28,7 @@ options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) App
 # for handler in logging.root.handlers[:]:
 #     logging.root.removeHandler(handler)
 logging.basicConfig(filename="app.log", filemode="a")
-logger = logging.getLogger("ActivateAdminlog")
+logger = logging.getLogger("CLubLA")
 handler = logging.StreamHandler()
 formatter = logging.Formatter("%(asctime)s %(name)-12s %(levelname) -8s %(message)s")
 handler.setFormatter(formatter)
