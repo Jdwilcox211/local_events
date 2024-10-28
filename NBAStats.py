@@ -150,9 +150,9 @@ def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):
                 logger.info(f'miami_entry {miami_entry} \n\n')
             
                 sheettype.update_cell(statexrow_A, statexcol, str(league_entry))
-                time.sleep(7)
+                time.sleep(5)
                 sheettype.update_cell(statexrow_B, statexcol, str(miami_entry))
-                time.sleep(7)
+                time.sleep(5)
             except Exception as e:
                 logger.warning(f'Error: {e}\n\n')
         statexcol+=1

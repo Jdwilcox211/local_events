@@ -83,12 +83,12 @@ def event_data_team_standard(sheettype):
                 playername=tag.text.strip()
                 logger.info(playername)
                 sheettype.update_cell(exrow, 2, playername)
-                time.sleep(6)
+                time.sleep(5)
         for team_data in team_card.find_all('td',{'class':'TableBase-bodyTd'}):
             datapoint=team_data.text.strip()
             logger.info(datapoint)
             sheettype.update_cell(exrow, excol, datapoint)
-            time.sleep(6)
+            time.sleep(5)
             excol+=1 
         exrow+=1
 

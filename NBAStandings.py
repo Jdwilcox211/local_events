@@ -82,12 +82,12 @@ def event_data_team_standard(sheettype):
             teamname=name.text.strip()
             logger.info(teamname)
             sheettype.update_cell(exrow, 2, teamname)
-            time.sleep(7)
+            time.sleep(5)
         for team_data in team_card.find_all('td'):
             datapoint=team_data.text.strip()
             logger.info(datapoint)
             sheettype.update_cell(exrow, excol, datapoint)
-            time.sleep(7)
+            time.sleep(5)
             excol+=1
         if exrow == 16:
             exrow+=2
