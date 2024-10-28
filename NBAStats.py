@@ -92,13 +92,13 @@ def clear_stat_sheet():
     time.sleep(10)
     wks.values_clear("NBA_Players!A25:J29")
     time.sleep(10)
-    wks.values_clear("NBA_Players!A35:J38")
+    wks.values_clear("NBA_Players!A35:J39")
     time.sleep(10)
-    wks.values_clear("NBA_Players!A42:J45")
+    wks.values_clear("NBA_Players!A42:J46")
     time.sleep(10)
-    wks.values_clear("NBA_Players!A49:J52")
+    wks.values_clear("NBA_Players!A49:J53")
     time.sleep(10)
-    wks.values_clear("NBA_Players!A56:J59")
+    wks.values_clear("NBA_Players!A56:J60")
     time.sleep(10)
 
 def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):

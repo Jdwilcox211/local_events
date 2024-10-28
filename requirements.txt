@@ -3,3 +3,5 @@ gspread
 lxml
 bs4
 selenium
+pandas
+requests
