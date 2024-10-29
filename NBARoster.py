@@ -51,8 +51,8 @@ scope = [
 ]
 #on linux change json path to full directory to run via crontab
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-#    "/home/kitchentv/python_scripts/glass-ranger-377322-28be46dc3b01.json", scope
-   "C:/Python projects/secret/glass-ranger-377322-28be46dc3b01.json", scope
+#    "/home/kitchentv/python_scripts/nba-stats.json", scope
+   "C:/Python projects/secret/nba-stats.json", scope
 )  # Your json file here
 
 gc = gspread.authorize(credentials)
@@ -64,7 +64,7 @@ roster_sheet = wks.worksheet("NBA_roster_data")
 
 def clear_team_sheet():
     wks.values_clear("NBA_roster_data!B2:J32")
-    time.sleep(10)
+    time.sleep(2)
 
 def event_data_team_standard(sheettype): 
     exrow=2
@@ -83,12 +83,12 @@ def event_data_team_standard(sheettype):
                 playername=tag.text.strip()
                 logger.info(playername)
                 sheettype.update_cell(exrow, 2, playername)
-                time.sleep(5)
+                time.sleep(2)
         for team_data in team_card.find_all('td',{'class':'TableBase-bodyTd'}):
             datapoint=team_data.text.strip()
             logger.info(datapoint)
             sheettype.update_cell(exrow, excol, datapoint)
-            time.sleep(5)
+            time.sleep(2)
             excol+=1 
         exrow+=1
 

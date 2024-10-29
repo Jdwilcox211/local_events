@@ -49,8 +49,8 @@ scope = [
 ]
 #on linux change json path to full directory to run via crontab
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-#    "/home/kitchentv/python_scripts/glass-ranger-377322-28be46dc3b01.json", scope
-   "C:/Python projects/secret/glass-ranger-377322-28be46dc3b01.json", scope
+#    "/home/kitchentv/python_scripts/nba-stats.json", scope
+   "C:/Python projects/secret/nba-stats.json", scope
 )  # Your json file here
 
 gc = gspread.authorize(credentials)
@@ -85,21 +85,21 @@ tppheaders = ['RANK','PLAYER','TEAM','FG3_PCT']
 
 def clear_stat_sheet():
     wks.values_clear("NBA_Players!A4:J8")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A11:J15")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A18:J22")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A25:J29")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A35:J39")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A42:J46")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A49:J53")
-    time.sleep(10)
+    time.sleep(2)
     wks.values_clear("NBA_Players!A56:J60")
-    time.sleep(10)
+    time.sleep(2)
 
 def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):
     pd.set_option('display.max_columns', None)
@@ -150,9 +150,9 @@ def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):
                 logger.info(f'miami_entry {miami_entry} \n\n')
             
                 sheettype.update_cell(statexrow_A, statexcol, str(league_entry))
-                time.sleep(5)
+                time.sleep(2)
                 sheettype.update_cell(statexrow_B, statexcol, str(miami_entry))
-                time.sleep(5)
+                time.sleep(2)
             except Exception as e:
                 logger.warning(f'Error: {e}\n\n')
         statexcol+=1
