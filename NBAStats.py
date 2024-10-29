@@ -85,21 +85,21 @@ tppheaders = ['RANK','PLAYER','TEAM','FG3_PCT']
 
 def clear_stat_sheet():
     wks.values_clear("NBA_Players!A4:J8")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A11:J15")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A18:J22")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A25:J29")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A35:J39")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A42:J46")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A49:J53")
-    time.sleep(2)
+    time.sleep(5)
     wks.values_clear("NBA_Players!A56:J60")
-    time.sleep(2)
+    time.sleep(12)
 
 def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):
     pd.set_option('display.max_columns', None)
@@ -148,7 +148,12 @@ def even_data_season_lead(sheettype,dfheaderlist,rowstart,statexcol,apiurl):
                 # logger.info(miastatlead[dfheader].shape)
                 miami_entry = miastatlead[dfheader].iloc[dfitem]
                 logger.info(f'miami_entry {miami_entry} \n\n')
-            
+                
+                if dfheader == 'FG_PCT' or dfheader == 'FG3_PCT':
+                    league_entry = league_entry*100
+                    miami_entry = miami_entry*100 
+                    
+                    
                 sheettype.update_cell(statexrow_A, statexcol, str(league_entry))
                 time.sleep(2)
                 sheettype.update_cell(statexrow_B, statexcol, str(miami_entry))

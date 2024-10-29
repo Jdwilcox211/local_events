@@ -194,3 +194,770 @@ INFO:NBAStandings:Indiana
 INFO:NBAStandings:NBA Script Complete 
  
 
+INFO:NBASTATS:2024-25
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 48 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 58 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 67 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 121 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 131 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Anthony Davis
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Nikola Joki\u0107
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:league entry = LaMelo Ball
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Tyrese Maxey
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Cam Thomas
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = LAL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = DEN
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = CHA
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = PHI
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = BKN
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:PTS
+INFO:NBASTATS:league entry = 32.8
+INFO:NBASTATS:miami_entry 19.3 
+
+
+INFO:NBASTATS:league entry = 32.3
+INFO:NBASTATS:miami_entry 18.3 
+
+
+INFO:NBASTATS:league entry = 31.7
+INFO:NBASTATS:miami_entry 17.3 
+
+
+INFO:NBASTATS:league entry = 31.3
+INFO:NBASTATS:miami_entry 11.0 
+
+
+INFO:NBASTATS:league entry = 30.7
+INFO:NBASTATS:miami_entry 10.3 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 28 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 64 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 93 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 93 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 113 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Ivica Zubac
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Andre Drummond
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:league entry = Chet Holmgren
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Alperen Sengun
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Rudy Gobert
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = LAC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = PHI
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = OKC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = HOU
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MIN
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:REB
+INFO:NBASTATS:league entry = 14.0
+INFO:NBASTATS:miami_entry 8.7 
+
+
+INFO:NBASTATS:league entry = 13.0
+INFO:NBASTATS:miami_entry 6.7 
+
+
+INFO:NBASTATS:league entry = 13.0
+INFO:NBASTATS:miami_entry 5.3 
+
+
+INFO:NBASTATS:league entry = 12.5
+INFO:NBASTATS:miami_entry 5.3 
+
+
+INFO:NBASTATS:league entry = 12.3
+INFO:NBASTATS:miami_entry 4.7 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 10 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 43 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 61 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 101 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 101 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = James Harden
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Trae Young
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:league entry = Scotty Pippen Jr.
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = De'Aaron Fox
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Cade Cunningham
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = LAC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = ATL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MEM
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = SAC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = DET
+INFO:NBASTATS:miami_entry MIA 
+
+
+WARNING:NBASTATS:Error: APIError: [503]: The service is currently unavailable.
+
+
+INFO:NBASTATS:AST
+INFO:NBASTATS:league entry = 11.7
+INFO:NBASTATS:miami_entry 6.7 
+
+
+INFO:NBASTATS:league entry = 10.8
+INFO:NBASTATS:miami_entry 4.7 
+
+
+INFO:NBASTATS:league entry = 8.3
+INFO:NBASTATS:miami_entry 3.7 
+
+
+INFO:NBASTATS:league entry = 8.0
+INFO:NBASTATS:miami_entry 2.7 
+
+
+INFO:NBASTATS:league entry = 7.5
+INFO:NBASTATS:miami_entry 2.7 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 25 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 80 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 80 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 80 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 80 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Chet Holmgren
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Brook Lopez
+INFO:NBASTATS:miami_entry Duncan Robinson 
+
+
+INFO:NBASTATS:league entry = Victor Wembanyama
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Walker Kessler
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Anthony Davis
+INFO:NBASTATS:miami_entry Thomas Bryant 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = OKC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MIL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = SAS
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = UTA
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = LAL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:BLK
+INFO:NBASTATS:league entry = 4.0
+INFO:NBASTATS:miami_entry 1.3 
+
+
+INFO:NBASTATS:league entry = 3.3
+INFO:NBASTATS:miami_entry 0.7 
+
+
+INFO:NBASTATS:league entry = 2.7
+INFO:NBASTATS:miami_entry 0.7 
+
+
+INFO:NBASTATS:league entry = 2.7
+INFO:NBASTATS:miami_entry 0.7 
+
+
+INFO:NBASTATS:league entry = 2.5
+INFO:NBASTATS:miami_entry 0.7 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 6 
+
+
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 48 
+
+
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 48 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 76 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 143 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = CJ McCollum
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Jordan Poole
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Shai Gilgeous-Alexander
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:league entry = Dyson Daniels
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:league entry = Cason Wallace
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = NOP
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = WAS
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = OKC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = ATL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = OKC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:STL
+INFO:NBASTATS:league entry = 3.0
+INFO:NBASTATS:miami_entry 2.3 
+
+
+INFO:NBASTATS:league entry = 3.0
+INFO:NBASTATS:miami_entry 1.3 
+
+
+INFO:NBASTATS:league entry = 3.0
+INFO:NBASTATS:miami_entry 1.3 
+
+
+INFO:NBASTATS:league entry = 2.8
+INFO:NBASTATS:miami_entry 1.0 
+
+
+INFO:NBASTATS:league entry = 2.7
+INFO:NBASTATS:miami_entry 0.7 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 71 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 92 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 94 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 95 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 104 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Jalen Duren
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:league entry = Jarrett Allen
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:league entry = Trayce Jackson-Davis
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Dereck Lively II
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Aaron Wiggins
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = DET
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = CLE
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = GSW
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = DAL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = OKC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:FG_PCT
+INFO:NBASTATS:league entry = 0.857
+INFO:NBASTATS:miami_entry 0.478 
+
+
+INFO:NBASTATS:league entry = 0.806
+INFO:NBASTATS:miami_entry 0.444 
+
+
+INFO:NBASTATS:league entry = 0.765
+INFO:NBASTATS:miami_entry 0.442 
+
+
+INFO:NBASTATS:league entry = 0.75
+INFO:NBASTATS:miami_entry 0.441 
+
+
+INFO:NBASTATS:league entry = 0.7
+INFO:NBASTATS:miami_entry 0.422 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 32 
+
+
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 51 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 75 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 92 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 122 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Jalen Green
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Payton Pritchard
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:league entry = Jayson Tatum
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:league entry = Jordan Poole
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:league entry = Zach LaVine
+INFO:NBASTATS:miami_entry Duncan Robinson 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = HOU
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = BOS
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = BOS
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = WAS
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = CHI
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:FG3M
+INFO:NBASTATS:league entry = 19
+INFO:NBASTATS:miami_entry 10 
+
+
+INFO:NBASTATS:league entry = 19
+INFO:NBASTATS:miami_entry 8 
+
+
+INFO:NBASTATS:league entry = 18
+INFO:NBASTATS:miami_entry 6 
+
+
+INFO:NBASTATS:league entry = 16
+INFO:NBASTATS:miami_entry 5 
+
+
+INFO:NBASTATS:league entry = 16
+INFO:NBASTATS:miami_entry 4 
+
+
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 1 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 3 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 76 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 111 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 125 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = Jaime Jaquez Jr.
+INFO:NBASTATS:miami_entry Jaime Jaquez Jr. 
+
+
+INFO:NBASTATS:league entry = Lindy Waters III
+INFO:NBASTATS:miami_entry Alec Burks 
+
+
+INFO:NBASTATS:league entry = Alec Burks
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = Spencer Dinwiddie
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:league entry = Nickeil Alexander-Walker
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = MIA
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = GSW
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MIA
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = DAL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MIN
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:FG3_PCT
+INFO:NBASTATS:league entry = 0.857
+INFO:NBASTATS:miami_entry 0.857 
+
+
+INFO:NBASTATS:league entry = 0.8
+INFO:NBASTATS:miami_entry 0.75 
+
+
+INFO:NBASTATS:league entry = 0.75
+INFO:NBASTATS:miami_entry 0.4 
+
+
+INFO:NBASTATS:league entry = 0.75
+INFO:NBASTATS:miami_entry 0.333 
+
+
+INFO:NBASTATS:league entry = 0.7
+INFO:NBASTATS:miami_entry 0.313 
+
+
+INFO:NBASTATS:NBA Script Complete 
+ 
+
+INFO:NBASTATS:2024-25
+INFO:NBASTATS:RANK
+INFO:NBASTATS:league entry = 1
+INFO:NBASTATS:miami_entry 10 
+
+
+INFO:NBASTATS:league entry = 2
+INFO:NBASTATS:miami_entry 43 
+
+
+INFO:NBASTATS:league entry = 3
+INFO:NBASTATS:miami_entry 61 
+
+
+INFO:NBASTATS:league entry = 4
+INFO:NBASTATS:miami_entry 101 
+
+
+INFO:NBASTATS:league entry = 5
+INFO:NBASTATS:miami_entry 101 
+
+
+INFO:NBASTATS:PLAYER
+INFO:NBASTATS:league entry = James Harden
+INFO:NBASTATS:miami_entry Jimmy Butler 
+
+
+INFO:NBASTATS:league entry = Trae Young
+INFO:NBASTATS:miami_entry Tyler Herro 
+
+
+INFO:NBASTATS:league entry = Scotty Pippen Jr.
+INFO:NBASTATS:miami_entry Terry Rozier 
+
+
+INFO:NBASTATS:league entry = De'Aaron Fox
+INFO:NBASTATS:miami_entry Bam Adebayo 
+
+
+INFO:NBASTATS:league entry = Cade Cunningham
+INFO:NBASTATS:miami_entry Nikola Jovi\u0107 
+
+
+INFO:NBASTATS:TEAM
+INFO:NBASTATS:league entry = LAC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = ATL
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = MEM
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = SAC
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:league entry = DET
+INFO:NBASTATS:miami_entry MIA 
+
+
+INFO:NBASTATS:AST
+INFO:NBASTATS:league entry = 11.7
+INFO:NBASTATS:miami_entry 6.7 
+
+
+INFO:NBASTATS:league entry = 10.8
+INFO:NBASTATS:miami_entry 4.7 
+
+
+INFO:NBASTATS:league entry = 8.3
+INFO:NBASTATS:miami_entry 3.7 
+
+
+INFO:NBASTATS:league entry = 8.0
+INFO:NBASTATS:miami_entry 2.7 
+
+
+INFO:NBASTATS:league entry = 7.5
+INFO:NBASTATS:miami_entry 2.7 
+
+
+INFO:NBASTATS:NBA Script Complete 
+ 
+
